@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    New pot
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+{% endblock %}
+
+
+{% block content %}
+    <form method="post" class="login-form">
+        <label for="name">Name</label>
+        <input name="name" id="name" type="text" required>
+        <br/>
+        <label for="description">Description</label>
+        <input name="description" id="description" type="text">
+        <br/>
+        <label for="moisture_value">Moisture threshold</label>
+        <input type="number" step=".000001" name="moisture_value" id="moisture_value" placeholder="0 to 100 percent" required>
+        <br/>
+        <label for="water_value">Watering time</label>
+        <input type="number" name="water_value" id="water_value" placeholder="in seconds" required>
+        <br/>
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}

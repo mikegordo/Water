@@ -1,0 +1,81 @@
+html, body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    font-size: 90%;
+}
+
+body {
+    background-color: #000;
+    color: #eee;
+    padding: 10px;
+}
+
+nav {
+    background-color: #001753;
+    padding: 0;
+    margin: 0;
+}
+
+nav h1 {
+    display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 10px 20px;
+    padding: 0;
+}
+
+nav h1 a,
+nav h1 a:link,
+nav h1 a:visited,
+nav h1 a:hover {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+}
+
+nav ul {
+    display: inline-block;
+    font-weight: 400;
+    margin: 0 2px;
+    padding: 0;
+    float: right;
+    clear-after: both;
+    list-style-type: none;
+    top: 14px;
+    right: 20px;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    font-weight: 400;
+    margin: 0 8px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited {
+    color: #ccc;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+section.content {
+    margin: 10px 0;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.flashes {
+    color: #9C1A1C;
+}

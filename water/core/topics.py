@@ -1,0 +1,7 @@
+MOISTURE_TOPIC = 'moisture'
+WATER_TOPIC = 'water'
+
+TOPICS = [
+    MOISTURE_TOPIC,
+    WATER_TOPIC
+]

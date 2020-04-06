@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Delete pot
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+{% endblock %}
+
+
+{% block content %}
+    <form method="post" class="login-form">
+        <label>Are you absolutely sure your are going to delete pot:</label>
+        <br/>
+        <label>{{ pot['id'] }} - {{ pot['name'] }}?</label>
+        <br/>
+        <input type="submit" value="Yes">
+    </form>
+{% endblock %}

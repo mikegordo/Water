@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Pots
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='pots.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+    <div id="pots-table">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Moisture threshold</th>
+                <th>Watering time</th>
+                <th>Created</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for pot in pots %}
+                <tr>
+                    <td class="td-id">{{ pot['id'] }}</td>
+                    <td class="td-name">{{ pot['name'] }}</td>
+                    <td class="td-description">{{ pot['description'] }}</td>
+                    <td class="td-mv">{{ pot['moisture_value'] }}%</td>
+                    <td class="td-wv">{{ pot['water_value'] }}s.</td>
+                    <td class="td-created">{{ pot['created'] }}</td>
+                    <td class="td-action">
+                        <a href="{{ url_for('water.pots_edit', pot_id=pot['id']) }}">Edit</a>
+                        <a href="{{ url_for('water.pots_delete', pot_id=pot['id']) }}">Delete</a>
+                        <a href="javascript:eject({{ pot['id'] }});">Eject</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a class="add-button" href="{{ url_for('water.pots_add') }}">Create</a>
+    </div>
+{% endblock %}

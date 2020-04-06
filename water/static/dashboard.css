@@ -1,0 +1,109 @@
+div.pot {
+    border: 5px solid #001753;
+    padding: 0;
+    display: inline-block;
+    width: 500px;
+    min-height: 300px;
+    margin: 0 10px 10px 0;
+    vertical-align: top;
+}
+
+.pot .name {
+    background-color: #001753;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.pot .name .id {
+    float: right;
+    clear-after: both;
+}
+
+.pot .description {
+    margin: 20px 20px;
+}
+
+.pot .moisture {
+    margin: 20px 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.pot .moisture-right {
+    display: inline-block;
+    font-size: 28px;
+    color: #aaa;
+}
+
+.pot .watering {
+    margin: 20px 20px;
+}
+
+#pots-table {
+    width: 100%;
+}
+
+#pots-table table {
+    min-width: 1000px;
+}
+
+#pots-table table th {
+    background-color: #001753;
+    padding: 10px 20px;
+}
+
+#pots-table table td {
+    padding: 10px 10px;
+    border-bottom: 1px solid #001753;
+}
+
+#pots-table table .td-id,
+#pots-table table .td-mv,
+#pots-table table .td-wv,
+#pots-table table .td-created {
+    text-align: center;
+}
+
+#pots-table table .td-name,
+#pots-table table .td-description {
+    text-align: left;
+}
+
+#pots-table .add-button,
+#pots-table table .td-action a,
+#pots-table table .td-action a:link,
+#pots-table table .td-action a:visited,
+#pots-table table .td-action a:hover {
+    text-decoration: none;
+    color: #ddd;
+    background-color: #001753;
+    padding: 5px 10px;
+}
+
+#pots-table table .td-action a:hover,
+#pots-table .add-button:hover {
+    color: #fff;
+}
+
+#pots-table table {
+    margin-bottom: 20px;
+}
+
+.lamp {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.online {
+    background-color: #477600;
+}
+
+.offline {
+    background-color: #761103;
+}

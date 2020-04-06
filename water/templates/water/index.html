@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='dashboard.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='chart.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+    <div id="pots-div"></div>
+{% endblock %}

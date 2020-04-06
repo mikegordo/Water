@@ -1,0 +1,7 @@
+Flask==1.1.1
+kafka
+kafka-python
+pytest
+gpiozero==1.5.1
+pigpio==1.45
+pytz

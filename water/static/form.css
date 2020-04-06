@@ -1,0 +1,29 @@
+form.login-form {
+    background-color: #001753;
+    padding: 20px;
+    display: inline-block;
+}
+
+form.login-form label {
+    display: inline-block;
+    min-width: 140px;
+}
+
+form.login-form label,
+form.login-form input:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+form.login-form input[type=text],
+form.login-form input[type=password] {
+    border: none;
+    font-size: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+form.login-form input[type=submit] {
+    border: none;
+    font-size: 100%;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 148px;
+}

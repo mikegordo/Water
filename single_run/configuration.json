@@ -1,0 +1,20 @@
+{
+    "broker": null,
+    "group": null,
+    "pots": [
+        {
+            "id": 1,
+            "sensor_pin": 0,
+            "sensor_threshold": 50,
+            "pump_pin": 21,
+            "duration": 5
+        },
+        {
+            "id": 2,
+            "sensor_pin": 1,
+            "sensor_threshold": 50,
+            "pump_pin": 23,
+            "duration": 5
+        }
+    ]
+}
