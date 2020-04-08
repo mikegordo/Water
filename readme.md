@@ -1,6 +1,9 @@
 ## Automated plant watering system
 
-... that not only watering plans but also has a cute UI and gathers statistics about sail moisture.
+... that not only watering plans but also has a cute UI and gathers statistics about soil moisture.
+
+![Screenshot](screenshot.png)
+
 
 My idea was to run a dedicated server with a Zookeeper service and Kafka. 
 In case you don't want to use that and UI is not required please see `single_run` directory. 
@@ -17,7 +20,7 @@ It has a single python script and that is all you need.
 
 ### Wiring
 
-TBD
+![Wiring](wiring.jpg)
 
 ### Kafka server settings
 
@@ -56,3 +59,14 @@ I installed the code to `/work/water` directory on raspberry pi.
 
 #### Don't forget
 to turn on SPI in `sudo raspi-config` for MCP3008 to work properly
+
+
+### Resources:
+
+This project is based on the following:
+
+https://gpiozero.readthedocs.io/en/stable/index.html
+
+http://www.cyber-omelette.com/2017/09/automated-plant-watering.html
+
+https://tutorials-raspberrypi.com/measuring-soil-moisture-with-raspberry-pi/
