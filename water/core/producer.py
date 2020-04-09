@@ -30,3 +30,6 @@ class DMSProducer:
             self.p.send(topic, value=message)
         except Exception as e:
             app.logger.error('Message send failed: {}'.format(e))
+
+    def close(self, timeout=3):
+        self.p.close(timeout=timeout)

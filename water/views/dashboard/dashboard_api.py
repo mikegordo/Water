@@ -34,7 +34,7 @@ def api_index():
         'SELECT * FROM pot p ORDER BY p.id'
     ).fetchall()
 
-    before = datetime.today() - timedelta(hours = 24 * 3)
+    before = datetime.today() - timedelta(hours=24 * 3)
 
     moisture = db.execute(
         "SELECT * FROM moisture m WHERE created > ? GROUP BY strftime('%d%H', m.created), pot_id ORDER BY m.created ASC",
@@ -75,7 +75,8 @@ def serialized(pots, last_, moisture_, watering_):
                        'last_water': last_water,
                        'moistures': moistures,
                        'graph': [m['value'] for m in moistures],
-                       'graph_labels': ['{} @ {}H'.format(round(m['value'], 2), m['created_real'].strftime('%H')) for m in moistures],
+                       'graph_labels': ['{} @ {}H'.format(round(m['value'], 2), m['created_real'].strftime('%H')) for m
+                                        in moistures],
                        'watering': watering,
                        'frequency': frequency
                        })
@@ -181,6 +182,7 @@ def force(pot_id):
                             'description': 'Watering by request, moisture value {}'.format(value)})
     producer = DMSProducer()
     producer.submit(WATER_TOPIC, message)
+    producer.close()
     return {'pot_id': pot_id,
             'value': value,
             'command': 'force'}
