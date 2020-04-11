@@ -17,3 +17,5 @@ build/
 log/*.log
 
 kafka-docker
+
+lambda/auth.json

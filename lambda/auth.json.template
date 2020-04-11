@@ -1,0 +1,5 @@
+{
+    "comment": "rename this file to auth.json and fill out the endpoint and token"
+    "endpoint": "http://0.0.0.0/force/{pot}",
+    "token": ""
+}
