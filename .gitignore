@@ -6,7 +6,6 @@ venv/
 *.pyc
 __pycache__/
 
-
 .pytest_cache/
 .coverage
 htmlcov/
@@ -16,6 +15,9 @@ build/
 *.egg-info/
 log/*.log
 
-kafka-docker
-
 lambda/auth.json
+
+data/kafka/data/*
+data/zk/data/*
+!data/kafka/data/.gitkeep
+!data/zk/data/.gitkeep
