@@ -1,0 +1,36 @@
+// python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ./proto/plant.proto
+
+syntax = "proto3";
+
+service PlantData {
+  rpc CreatePlant(Plant) returns (PlantResponse) {}
+  rpc UpdatePlant(UpdatePlantRequest) returns (PlantResponse) {}
+  rpc GetPlants(EmptyRequest) returns (PlantArrayResponse) {}
+}
+
+message Plant {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  int32 waterValue = 4;
+  float moistureValue = 5;
+  string created = 6;
+}
+
+message PlantResponse {
+  bool success = 1;
+  string error = 2;
+  Plant plant = 3;
+}
+
+message UpdatePlantRequest {
+  int32 id = 1;
+  Plant plant = 2;
+}
+
+message EmptyRequest {
+}
+
+message PlantArrayResponse {
+  repeated Plant plants = 1;
+}

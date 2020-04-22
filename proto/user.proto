@@ -1,0 +1,38 @@
+// python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ./proto/user.proto
+
+syntax = "proto3";
+
+service UserData {
+  rpc CreateUser(BasicUser) returns (UserResponse) {}
+  rpc UpdateUser(UpdateUserRequest) returns (UserResponse) {}
+  rpc AuthenticateUser(BasicUser) returns (UserResponse) {}
+  rpc GetUser(TokenRequest) returns (UserResponse) {}
+}
+
+message BasicUser {
+  string username = 2;
+  string password = 3;
+}
+
+message User {
+  int32 id = 1;
+  string username = 2;
+  string password = 3;
+  string token = 4;
+  string created = 5;
+}
+
+message TokenRequest {
+  string token = 1;
+}
+
+message UpdateUserRequest {
+  int32 id = 1;
+  User user = 2;
+}
+
+message UserResponse {
+  bool success = 1;
+  string error = 2;
+  User user = 3;
+}

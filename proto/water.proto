@@ -1,0 +1,31 @@
+// python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ./proto/water.proto
+
+syntax = "proto3";
+
+service WaterData {
+  rpc SetWater(WateringRequest) returns (EmptyResponse) {}
+  rpc GetWater(GetWaterRequest) returns (WaterResponse) {}
+}
+
+message WateringRequest {
+  int32 plantId = 1;
+  int32 waterValue = 2;
+}
+
+message EmptyResponse {
+}
+
+message GetWaterRequest {
+  int32 plantId = 1;
+}
+
+message Water {
+  int32 plantId = 1;
+  float value = 2;
+  string description = 3;
+  string created = 4;
+}
+
+message WaterResponse {
+  repeated Water waters = 1;
+}

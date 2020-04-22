@@ -1,0 +1,22 @@
+// python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ./proto/moisture.proto
+
+syntax = "proto3";
+
+service MoistureData {
+  rpc GetMoistures(MoistureRequest) returns (MoistureArrayResponse) {}
+}
+
+message MoistureRequest {
+  int32 plantId = 1;
+}
+
+message Moisture {
+  int32 plantId = 1;
+  float value = 2;
+  string description = 3;
+  string created = 4;
+}
+
+message MoistureArrayResponse {
+  repeated Moisture moistures = 1;
+}

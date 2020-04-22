@@ -11,8 +11,6 @@ services:
       - ./log/:/worker/log/
     depends_on:
       - kafka
-    ports:
-      - 5300:5300
     expose:
       - 5300
     restart: on-failure
@@ -29,8 +27,6 @@ services:
       - worker
     ports:
       - 80:5000
-    expose:
-      - 80
     restart: on-failure
 
   zookeeper:
